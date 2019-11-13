@@ -1,0 +1,10 @@
+<h1>Create New Restaurant Form</h1>
+
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.input :name, label: 'Add Restaurant name' %>
+  <%= f.input :address %>
+  <%= f.input :category, collection: Restaurant::PERMITTED_CATEGORIES %>
+  <%= f.input :phone_number %>
+  <%= f.button :submit %>
+
+<% end %>
